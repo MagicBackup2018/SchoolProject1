@@ -28,6 +28,7 @@ number = ''.join(letters)
 
 print('I have thought up a number.')
 print('You have', guesses, 'guesses to get it.')
+print('Highscore is: #' , counter_least , 'guesses')
 
 counter = 1
 
