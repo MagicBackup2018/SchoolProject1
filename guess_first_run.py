@@ -12,8 +12,8 @@ print('Try to guess what it is.')
 print('Here are some clues:')
 print('When I say:    That means:')
 print('  centi         One digit is correct but in the wrong position.')
-print('  deci        One digit is correct and in the right position.')
-print('  backit       No digit is correct.')
+print('  deci          One digit is correct and in the right position.')
+print('  backit        No digit is correct.')
 print('There are no repeated digits in the number.')
 
 # Create a random number.
