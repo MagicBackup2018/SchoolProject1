@@ -1,8 +1,7 @@
 import shelve
 from random import sample, shuffle
 
-d = shelve.open('high_score')
-counter_least = d['score'] 
+counter_least=20
 
 digits = 3
 guesses = 20
@@ -66,21 +65,20 @@ while True:
         print('You ran out of guesses. The answer was', number)
         break
 
+
+
 if counter < counter_least:
 
     print("CONGRATULATIONS AGAIN!! You Made A New HighScore")
 
-    d = shelve.open('high_score')   
-    d['score'] = counter          
-    d.close()
-
+    counter_least = counter
 
 else:
     print('The Least Number Of guesses are' , counter_least , "It's The Highscore, try to Beat IT!")
 
-
-
-
+d = shelve.open('high_score') # here you will save the score variable   
+d['score'] = counter_least - 1          # thats all, now it is saved on disk.
+d.close()
 
     
 
